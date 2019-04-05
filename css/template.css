@@ -1,0 +1,506 @@
+/*************/
+/*** RESET ***/
+/*************/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input, textarea {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+    vertical-align: baseline;
+    line-height: 1.25;
+    box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: inside;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*************/
+/*** FONTS ***/
+/*************/
+
+@font-face {
+    font-family: Montserrat;
+    src: url('../fonts/montserrat-medium-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url('../fonts/montserrat-bold-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url('../fonts/nunitosans-regular-webfont.woff2') format('woff2'),
+         url('../fonts/nunitosans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url('../fonts/fonts/nunitosans-bold-webfont.woff2') format('woff2'),
+         url('../fonts/nunitosans-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+/***********************/
+/*** TEMPLATE STYLES ***/
+/***********************/
+
+/*
+Noir : #171717 / R23 V23 B23
+Gris clair : #f5f5f5
+Gris : #787878 / R120 V120 B120
+Vert d'eau : #10c9c3
+Vert d'eau clair : #22e4de
+*/
+
+html, body{
+    font-size: 100%;
+}
+
+@media screen and (max-width:840px) {
+    html, body{
+        font-size: 90%;
+    }
+}
+
+body {
+    font-family: Nunito;
+    color: #787878;
+    background-color: #f5f5f5;
+    padding-top: 81px;
+}
+
+@media screen and (min-width:841px) {
+    body {
+        padding-top: 102px;
+    }
+}
+
+/* Titles */
+
+.tmp-title1 {
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 2.4rem; /* 38.4px */
+    color: #171717;
+}
+
+.tmp-title2 {
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 1.75rem; /* 28px */
+    color: #171717;
+}
+
+/* Links & buttons */
+
+a {
+    color: #171717;
+}
+a:hover {
+    color: #10c9c3;
+}
+
+.tmp-btn {
+    display: inline-block;
+    background-color: #10c9c3;
+    padding: .9rem 1.6rem; /* 14.4px 25.6px */
+    font-family: Montserrat;
+    font-size: 0.85rem; /* 13.6px */
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: .1rem;
+    transition: background-color 400ms;
+}
+
+.tmp-btn:hover{
+    background-color: #22e4de;
+    box-shadow: 0 0 .95rem rgba(23,23,23,.1);
+    color: white;
+}
+
+.tmp-btn-small {
+    display: inline-block;
+    background-color: #10c9c3;
+    padding: .7rem 1.15rem;
+    font-family: Montserrat;
+    font-size: 0.75rem;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: .1rem;
+    transition: background-color 400ms;
+}
+
+.tmp-btn-small:hover{
+    background-color: #22e4de;
+    box-shadow: 0 0 .8rem rgba(23,23,23,.1);
+    color: white;
+}
+
+/* Strong */
+
+strong {
+    font-weight: bold;
+    color: #171717;
+}
+
+/* Page menu */
+
+.tmp-menu{
+    position: fixed;
+    width:100%;
+    background-color: white;
+    padding: 2.15rem 2rem; /* 34.4px 0 */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    top:0;
+}
+
+.tmp-menu a{
+    text-decoration: none;
+    color: #171717;
+}
+
+.tmp-menu .home-link {
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 1.5rem; /* 24px */
+    margin-top:.2rem;
+}
+
+.tmp-menu .site-links {
+    margin-top: .35rem;
+}
+
+.tmp-menu .site-links a {
+    font-family: Montserrat;
+    font-size: 0.9rem; /* 14.4px */
+    text-transform: uppercase;
+    margin-left: 1.5rem;
+    transition: color 400ms;
+}
+
+.tmp-menu .site-links a:hover {
+    color: #22e4de;
+}
+
+.tmp-menu .site-links a.active {
+    color: #10c9c3;
+}
+
+.tmp-menu .burger {
+    display: none;
+    padding-top: 3.5px;
+    cursor: pointer;
+}
+
+.tmp-menu .burger span{
+    display: block;
+    width: 1.75rem;
+    height: 2px;
+    background-color: #171717;
+    transition: all 500ms;
+}
+
+.tmp-menu .burger span:nth-child(1),
+.tmp-menu .burger span:nth-child(2) {
+    margin-bottom: 7px;
+}
+
+.tmp-menu[data-state=opened] .burger span:nth-child(1) {
+    transform: rotate(45deg);
+    transform-origin: 0 0;
+    margin-bottom: 15px;
+    margin-right: -5px;
+}
+
+.tmp-menu[data-state=opened] .burger span:nth-child(2) {
+    display: none;
+} 
+
+.tmp-menu[data-state=opened] .burger span:nth-child(3) {
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+    margin-right: -5px;
+}
+
+
+@media screen and (max-width:840px) {
+
+    .tmp-menu{
+        padding-top: 1.7rem;
+        padding-bottom: 1.7rem;
+    }
+
+    .tmp-menu .site-links {
+        text-align: right;
+    }
+
+    .tmp-menu .site-links a {
+        margin-left: 0;
+    }
+
+    .tmp-menu[data-state=closed] .site-links a{
+        display: none;
+    }
+
+    .tmp-menu[data-state=opened] .site-links a {
+        display: block;
+        padding: .45rem 0;
+    }
+    .tmp-menu[data-state=opened] .site-links a:last-of-type {
+        padding-bottom: 0;
+    }
+
+    .tmp-menu .burger {
+        display: inline-block;
+    }
+
+    .tmp-menu[data-state=opened] .burger {
+        margin-bottom: 20px;
+    }
+
+}
+
+/* Page main */
+
+.tmp-main {
+    padding: 0 2rem;
+}
+
+/* Page footer */
+
+.tmp-footer {
+    padding: 4rem 2rem;
+    background-color: #171717;
+}
+
+.tmp-footer h1,
+.tmp-footer h2,
+.tmp-footer a {
+    color: white;
+}
+
+.tmp-footer h1,
+.tmp-footer h2 {
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.tmp-footer h1 {
+    font-size: 1.5rem;
+}
+
+.tmp-footer h2 {
+    font-size: 1.25rem;
+}
+
+.tmp-footer a {
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: .25rem;
+}
+
+.tmp-footer a:hover{
+    color: #10c9c3;
+}
+
+.tmp-footer .contact a {
+    background-repeat: no-repeat;
+    background-position-y: center;
+    padding-left: 24px;
+}
+
+.tmp-footer .contact a:nth-of-type(1) {
+    background-image: url(../images/template/mail.png);
+}
+.tmp-footer .contact a:nth-of-type(1):hover{
+    background-image: url(../images/template/mail-hover.png);
+}
+
+.tmp-footer .contact a:nth-of-type(2) {
+    background-image: url(../images/template/phone.png);
+}
+.tmp-footer .contact a:nth-of-type(2):hover{
+    background-image: url(../images/template/phone-hover.png);
+}
+
+.tmp-footer .contact a:nth-of-type(3) {
+    background-image: url(../images/template/linkedin.png);
+}
+.tmp-footer .contact a:nth-of-type(3):hover{
+    background-image: url(../images/template/linkedin-hover.png);
+}
+
+.tmp-footer .contact a:nth-of-type(4) {
+    background-image: url(../images/template/github.png);
+}
+.tmp-footer .contact a:nth-of-type(4):hover{
+    background-image: url(../images/template/github-hover.png);
+}
+
+.tmp-footer strong {
+    color: inherit;
+}
+@media screen and (max-width:500px) {
+    .tmp-footer .contact {
+        margin-bottom: 2rem;
+    }
+}
+@media screen and (min-width:501px) {
+    .tmp-footer {
+        display: flex;
+    }
+    
+    .tmp-footer .contact,
+    .tmp-footer .menu {
+        flex:1;
+    }
+    
+    .tmp-footer .menu .links {
+        columns: 2;
+    }
+}
+
+/* Page main (not home) */
+
+.tmp-main:not(.home) {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+}
+
+/* Page content (not home) */
+
+.tmp-content h1,
+.tmp-content header {
+    margin-bottom: 2rem;
+}
+.tmp-content header p{
+    font-size: 1.15rem;
+}
+
+.tmp-content h2,
+.tmp-content p,
+.tmp-content ul,
+.tmp-content table,
+.tmp-content form {
+    margin-bottom: 1.3rem;
+}
+
+/* Page aside */
+
+.tmp-aside {
+    font-size: .95rem;
+}
+
+.tmp-aside h2 {
+    margin-top: .6rem;
+    margin-bottom: 2.15rem;
+}
+
+.tmp-aside p {
+    line-height: 1.5;
+}
+
+.tmp-aside .infos p {
+    margin-bottom: .5rem;
+}
+
+.tmp-aside .infos a:first-of-type {
+    margin-bottom: .5rem;
+}
+
+.tmp-aside .projects h2 {
+    margin-top: 2.5rem;
+}
+
+.tmp-aside .projects h3 {
+    color: #10c9c3;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: .25rem;
+}
+
+.tmp-aside .projects a {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width:840px) {
+    .tmp-aside {
+        border-top: 1px solid #787878;
+        margin-top: 2.75rem;
+        padding-top: 2rem;
+    }
+}
+@media screen and (min-width:841px) {
+    .tmp-main:not(.home) {
+       display: flex;
+    }
+    .tmp-content {
+        width:63.5%;
+    }
+    .tmp-aside {
+        padding-left: 3.15rem;
+        width: 36.5%;
+    }
+}
+
+/* Images responsives */
+
+.img-responsive {
+    max-width: 100%;
+    width: auto; /* pour IE */
+    height: auto; /* pour IE */ -ms-interpolation-mode: bicubic; /* lissage pour IE */
+}
