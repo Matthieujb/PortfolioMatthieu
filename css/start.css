@@ -1,0 +1,16 @@
+
+@media only screen and (min-width: 400px) {
+
+
+.start{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+img{
+    max-width: 100%;
+  height: auto;
+}
+
+}

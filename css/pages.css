@@ -4,6 +4,7 @@
  
 /* Compétences */
  
+
 .competences-content table{
     width: 100%;
 }
@@ -18,7 +19,7 @@
     letter-spacing: .1rem;
 }
 .competences-content tr:not(.first) th {
-    color: #26ADE4;
+    color: #10c9c3;
     font-weight: bold;
 }
 .competences-content th,
@@ -36,7 +37,7 @@
 .competences-content tr td:nth-of-type(1) {
     border-right: .05rem solid #787878;
 }
- 
+
 .competences-content .blue-star,
 .competences-content .grey-star {
     width: 21px;
@@ -44,8 +45,8 @@
     margin-right: 4px;
     display: inline-block;
 }
-.competences-content .grey-star {
-    background-image: url(../images/competences/grey-star.png);
+.competences-content td .grey-star {
+    background-image: url(competences/grey-star.png);
 }
 .competences-content .blue-star {
     background-image: url(../images/competences/blue-star.png);
