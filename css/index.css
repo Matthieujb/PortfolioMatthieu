@@ -99,7 +99,7 @@ header .text .tmp-btn:first-child {
 /* Headings */
 
 .headings {
-    background-color: #10c9c3;
+    background-color: #a21200;
     display: flex;
     margin: 0 -2rem;
 }
@@ -133,7 +133,7 @@ header .text .tmp-btn:first-child {
         padding: 2rem;
     }
     .headings a:nth-child(2) {
-        background-color: #22e4de;
+        background-color: #921f10;
     }
 
     .headings h2 {
@@ -154,7 +154,7 @@ header .text .tmp-btn:first-child {
 @media screen and (min-width:841px) {
 
     .headings a:hover{
-        background-color: #22e4de;
+        background-color: #e53119;
     }
 
     .headings h2 {
@@ -216,7 +216,7 @@ header .text .tmp-btn:first-child {
 }
 
 .last-projects .project h3 {
-    color: #10c9c3;
+    color: #a21200;
     font-size: 1.15rem;
     text-transform: uppercase;
     font-family: Montserrat;
